@@ -51,8 +51,6 @@ public class CenterController {
 	}
 	@GetMapping("")
 	public ResponseEntity<List<CenterDTO>> getAll(){
-			
-
 		try {
 			List<CenterDTO> as = centerService.getAll();
 			return ResponseEntity.of(Optional.of(as));
@@ -61,7 +59,7 @@ public class CenterController {
 			e.printStackTrace();
 		}
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-	}
+		}
 	@PutMapping("/{id}")
 	public String update(@PathVariable("id") int id , @RequestBody CenterDTO cent) {
 		CenterDTO up = centerService.update(cent,id);
