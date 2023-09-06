@@ -21,7 +21,7 @@ import com.Shabbir.api.center.model.service.CenterService;
 @RestController
 @RequestMapping("/center")
 public class CenterController {
-
+//controller
 	@Autowired
 	private CenterService centerService;
 
